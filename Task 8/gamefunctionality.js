@@ -6,7 +6,7 @@
 
     if (seconds == 1) {
       temp = document.getElementById('txt');
-      temp.innerHTML = "all done, bye bye";
+      temp.innerHTML = "BooM";
       return;
     }
 
