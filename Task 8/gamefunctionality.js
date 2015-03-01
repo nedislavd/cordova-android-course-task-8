@@ -1,17 +1,28 @@
-// var time;
-// var counter=0;
-// function Timer(){
-// 	document.getElementById("txt").value=counter;
-// 	counter=counter+1;
-// 	time=setTimeout(function(){ Timer() },1000);
-// }
+  var seconds;
+  var temp;
+  function countdown() {
+    seconds = document.getElementById('txt').innerHTML;
+    seconds = parseInt(seconds, 10);
+
+    if (seconds == 1) {
+      temp = document.getElementById('txt');
+      temp.innerHTML = "all done, bye bye";
+      return;
+    }
+
+    seconds--;
+    temp = document.getElementById('txt');
+    temp.innerHTML = seconds;
+    timeoutMyOswego = setTimeout(countdown, 1000);
+  }
+
 
 function StartGame(){
     var beggin= document.getElementById("starbtn");
     beggin.style.display = 'none';
     var game= document.getElementById("ingame");
     game.style.display = 'block';
-    //Timer();
+    countdown();
 }
 
 /*
