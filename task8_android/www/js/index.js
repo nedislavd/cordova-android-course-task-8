@@ -27,6 +27,16 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.getElementById('info-button').onclick = this.openInfo;
+        document.getElementById('close-info').onclick = this.closeInfo;
+    },
+    openInfo: function () {
+        document.getElementById('info-box').setAttribute('style', 'display:block;');
+        document.getElementById('menu-wrapper').setAttribute('style', 'display:none;');
+    },
+    closeInfo: function () {
+        document.getElementById('info-box').setAttribute('style', 'display:none;');
+        document.getElementById('menu-wrapper').setAttribute('style', 'display:block;');
     },
     // deviceready Event Handler
     //
@@ -37,14 +47,8 @@ var app = {
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
+        document.getElementById('loading').setAttribute('style', 'display:none;');
+        document.getElementById('game').setAttribute('style', 'display:block;');
     }
 };
 

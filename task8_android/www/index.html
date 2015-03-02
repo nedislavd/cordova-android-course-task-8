@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -10,11 +11,51 @@
     </head>
     <body>
         <div class="app">
-            <h1>Велики Мисли 2</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+
+            <div id="loading" class="app">
+              <h1>Loading</h1>
             </div>
+            <div id="game" class="app">
+                <div id="menu-wrapper">
+                    <h1>Велики Мисли 2</h1>
+                    <p id="text"></p>
+                    <span class="button" id="info-button">Rules</span>
+                    <br>
+                    <br>
+                    <br>
+                    <span class="button" id="start-game">Start Game</span>
+                </div>
+                <div id="info-box">
+                    <h1>Познай великата мисъл</h1>
+                    <p>За да спечелите трябва да подредите буквите във всяка дума с не повече от 3 опита (за цялото изречение) в рамките на минута.</p>
+                    <p>Например:</p>
+                    <p><i>ичамоб ад ъпутмав он аязмр ад исгамприт</i></p>
+                    <p>Алберт Айнщейн (1879 - 1955)</p>
+                    <p>Отговор:</p>
+                    <p>Обичам да пътувам, но мразя да пристигам.</p>
+                    <br>
+                    <br>
+                    <span class="button" id="close-info">Close</span>
+                </div>
+                <div id="game-wrapper">
+                    <div class="timerPlacer">
+                        <p id="txt">60</p>
+                    </div>
+
+                    <div class="gameUI">
+                        <button id="starbtn" onclick="StartGame()">START</button>
+                        <div id="ingame">
+                            <div id="sentence"></div>
+                            <div id="authorinfo"></div>
+                            <!-- <div class="answer"> -->
+                                <textarea rows="8" cols="50" id="answer" placeholder="Write your answer here!"></textarea>
+                            <!-- </div> -->
+                            <button id="reset" onclick="window.location.reload()">RESET</button>
+                        </div> <!-- /ingame -->
+                    </div> <!-- /gameUI -->
+                </div>
+            </div>
+
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
