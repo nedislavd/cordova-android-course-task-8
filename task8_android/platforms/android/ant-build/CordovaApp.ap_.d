@@ -32,12 +32,11 @@ C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_
 C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\assets\www\cordova.js \
 C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\assets\www\cordova_plugins.js \
 C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\assets\www\css \
-C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\assets\www\game.html \
 C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\assets\www\img \
 C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\assets\www\index.html \
 C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\assets\www\js \
 C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\assets\www\css\gamestyles.css \
 C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\assets\www\css\index.css \
-C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\assets\www\js\gamefunctionality.js \
 C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\assets\www\js\index.js \
+C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\assets\www\js\jquery.min.js \
 C:\Users\barba\Desktop\Android HTML5 Course\cordova-android-course-task-8\task8_android\platforms\android\ant-build\AndroidManifest.xml \

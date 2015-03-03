@@ -51,7 +51,7 @@ body {
                                    /* offset horizontal: half of text area width */
     position: relative;
     width: 90%;
-    padding-top: 30%;
+    padding-top: 10%;
     margin: 0 auto;
     text-align: center;
 }
@@ -67,14 +67,16 @@ body {
 }
 
 h1 {
-    font-size:24px;
+    font-size:36px;
     font-weight:normal;
     margin:0px;
     overflow:visible;
     padding:0px;
     text-align:center;
 }
-
+ p {
+    font-size: 18px;
+ }
 .event {
     border-radius:4px;
     -webkit-border-radius:4px;

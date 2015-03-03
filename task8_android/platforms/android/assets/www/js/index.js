@@ -30,7 +30,7 @@ var app = {
         document.getElementById('info-button').onclick = this.openInfo;
         document.getElementById('close-info').onclick = this.closeInfo;
         document.getElementById('start-game').onclick = this.showGame;
-        document.getElementById('starbtn').onclick = this.timer;
+        document.getElementById('starbtn').onclick = this.gameInit;
     },
     openInfo: function () {
         document.getElementById('info-box').setAttribute('style', 'display:block;');
@@ -61,7 +61,12 @@ var app = {
         temp = document.getElementById('txt');
         temp.innerHTML = seconds;
         timeoutMyOswego = setTimeout(function() { app.timer(); }, 1000);
-      },
+    },
+    gameInit: function() {
+        document.getElementById('starbtn').setAttribute('style', 'display:none;');
+        document.getElementById('ingame').setAttribute('style', 'display:block;');
+        app.timer();
+    },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
