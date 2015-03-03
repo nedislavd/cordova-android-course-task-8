@@ -29,6 +29,8 @@ var app = {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         document.getElementById('info-button').onclick = this.openInfo;
         document.getElementById('close-info').onclick = this.closeInfo;
+        document.getElementById('start-game').onclick = this.showGame;
+        document.getElementById('starbtn').onclick = this.timer;
     },
     openInfo: function () {
         document.getElementById('info-box').setAttribute('style', 'display:block;');
@@ -38,6 +40,28 @@ var app = {
         document.getElementById('info-box').setAttribute('style', 'display:none;');
         document.getElementById('menu-wrapper').setAttribute('style', 'display:block;');
     },
+    showGame: function () {
+        document.getElementById('menu-wrapper').setAttribute('style', 'display:none;');
+        document.getElementById('game-wrapper').setAttribute('style', 'display:block;');
+    },
+    timer: function() {
+        var seconds,
+            temp;
+
+        seconds = document.getElementById('txt').innerHTML;
+        seconds = parseInt(seconds, 10);
+
+        if (seconds == 1) {
+            temp = document.getElementById('txt');
+            temp.innerHTML = "BooM";
+            return;
+        }
+
+        seconds--;
+        temp = document.getElementById('txt');
+        temp.innerHTML = seconds;
+        timeoutMyOswego = setTimeout(function() { app.timer(); }, 1000);
+      },
     // deviceready Event Handler
     //
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
