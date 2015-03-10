@@ -24,10 +24,14 @@
                     <br>
                     <br>
                     <span class="button" id="start-game">Start Game</span>
+                    <br>
+                    <br>
+                    <br>
+                    <span class="button" id="results">See Scores</span>
                 </div>
                 <div id="info-box">
                     <h1>Познай великата мисъл</h1>
-                    <p>За да спечелите трябва да подредите буквите във всяка дума с не повече от 3 опита (за цялото изречение) в рамките на минута.</p>
+                    <p>За да спечелите трябва да подредите буквите във всяка дума с не повече от 3 опита (за цялото изречение) в рамките на минута.За всеки верен отговор получавате 1 точка.</p>
                     <p>Например:</p>
                     <p><i>ичамоб ад ъпутмав он аязмр ад исгамприт</i></p>
                     <p>Алберт Айнщейн (1879 - 1955)</p>
@@ -51,11 +55,22 @@
                                 <!-- <div class="answer"> -->
                                     <textarea rows="8" cols="50" id="answer" placeholder="Write your answer here!"></textarea>
                                 <!-- </div> -->
-                                <button id="enter-sentence">Enter Sentence</button>
+                                <button id="enter-sentence" class="gbutton">Enter Sentence</button>
                             </div>
-                            <button id="reset" onclick="window.location.reload()">RESET</button>
+                            <button id="reset" class="gbutton" onclick="window.location.reload()">RESET</button>
                         </div> <!-- /ingame -->
                     </div> <!-- /gameUI -->
+                </div>
+                <div id="score">
+                  <h1>Scores</h1>
+                  <p id="text"></p>
+                  <p>
+                    <input type="text" value="PLayer1" id="player">
+                  </p>
+                  <p>
+                    <input type="text" value="" id="score">
+                  </p>
+                  <button id="back" class="gbutton">GO Back</button>
                 </div>
             </div>
 

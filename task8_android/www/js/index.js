@@ -16,6 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+var score=0;
 var app = {
     // Application Constructor
     initialize: function() {
@@ -57,6 +58,8 @@ var app = {
         if (seconds == 1) {
             temp = document.getElementById('txt');
             alert('GAME OVER!');
+            app.saveData();
+            app.loadData();
             window.location.reload();
         }
 
@@ -74,7 +77,7 @@ var app = {
     scramble: function (str) {
         var scrambled = '',
         randomNum;
-        
+
         while (str.length > 1) {
             randomNum = Math.floor(Math.random() * str.length);
             scrambled += str.charAt(randomNum);
@@ -115,6 +118,7 @@ var app = {
 
         if ( userEntry == checkThisString ) {
             alert('VOILA, YOU GOT IT!');
+            score++;
         } else {
             alert('YOU NOOB, TRY AGAIN!');
             document.getElementById('inner-game').setAttribute('style', 'display:none;');
@@ -133,6 +137,20 @@ var app = {
     receivedEvent: function(id) {
         document.getElementById('loading').setAttribute('style', 'display:none;');
         document.getElementById('game').setAttribute('style', 'display:block;');
+    }
+    loadData : function() {
+      var text = "Player: "+sessionStorage.getItem('player')+"</br>\n";
+      text += "Score: "+sessionStorage.getItem('score')+"</br>\n";
+      document.getElementById('text').innerHTML = text;
+    },
+
+    // Handle button click
+    saveData : function() {
+      // Save name to local storage
+      sessionStorage.setItem('player1', document.getElementById('player').value);
+      // Save age to session storage
+      sessionStorage.setItem('score', document.getElementById('score').value);
+      app.loadData();
     }
 };
 
